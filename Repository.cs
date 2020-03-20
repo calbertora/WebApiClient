@@ -1,9 +1,11 @@
 using System;
+using System.Text.Json.Serialization;
 
 namespace WebApiClient
 {
     public class Repository
     {
-        public string name { get; set; }
+        [JsonPropertyName("name")]
+        public string Name { get; set; }
     }
 }
