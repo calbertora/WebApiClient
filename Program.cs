@@ -27,8 +27,17 @@ namespace WebApiClient
         static async Task Main(string[] args)
         {
             var repositories = await ProcessRepositoriesAsync();
-            foreach(var repository in repositories)
-                Console.WriteLine(repository.Name);
+            
+            foreach (var repo in repositories)
+            {
+                Console.WriteLine(repo.Name);
+                Console.WriteLine(repo.Description);
+                Console.WriteLine(repo.GitHubHomeUrl);
+                Console.WriteLine(repo.Homepage);
+                Console.WriteLine(repo.Watchers);
+                Console.WriteLine(repo.LastPush);
+                Console.WriteLine();
+            }
         }
     }
 }
